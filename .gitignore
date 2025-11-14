@@ -1,0 +1,29 @@
+# Ignore build output folders
+bin/
+obj/
+
+# Ignore Visual Studio and VS Code settings
+.vs/
+.vscode/
+
+# Ignore user-specific files
+*.user
+*.suo
+
+# Ignore backup and cache files
+*.tmp
+*.cache
+*.log
+*.bak
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+
+# Ignore test results
+TestResults/
+
+# Ignore other unnecessary files
+*.pdb
+*.dbmdl
+*.sln.docstates
