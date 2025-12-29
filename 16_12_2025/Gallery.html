@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Gallery</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-container {
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .gallery-title {
+            text-align: center;
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .movie-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .movie-name {
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="gallery-container">
+    <h1 class="gallery-title">🎬 Movie Gallery</h1>
+
+    <div class="gallery">
+        <a href="Content.html?id=1" class="movie-card">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/a3d6c588713509.5dde8adf50756.jpg" alt="Kaithi">
+            <div class="movie-name">Kaithi</div>
+        </a>
+
+        <a href="Content.html?id=2" class="movie-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUgp5lhPW6CSb5js3MK1QX6nPxEqKxI10LMg&s" alt="Ayan">
+            <div class="movie-name">Ayan</div>
+        </a>
+
+        <a href="Content.html?id=3" class="movie-card">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d23f41184733377.65571621a3846.jpg" alt="Leo">
+            <div class="movie-name">Leo</div>
+        </a>
+
+        <a href="Content.html?id=4" class="movie-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0HBtT9K_fW4dT7BQbMP52skQvGRaMDJWEihURaaLMouZwgGR7_96UZBzOqIqYitoxCs&usqp=CAU" alt="Vada Chennai">
+            <div class="movie-name">Vada Chennai</div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

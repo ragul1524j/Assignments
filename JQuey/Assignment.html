@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <!-- 1. Write a jquery program to  copy content from one div to other when 
+button is clicked  -->
+    <div class="outer">
+        <div class="content" id="div1">
+            <h4>Thomas Shelby</h1>
+                <p>Associate Sofware Administrator</p>
+        </div>
+        <input type="button" value="Move"
+            style="margin-top: 20px; margin-bottom: 20px;width: 70px; height: 25px; background-color:rgb(42, 188, 233); border: 2px solid rgb(42, 188, 233); border-radius: 20px;  "
+            id="moveto" />
+        <input type="button" value="Back"
+            style="margin-bottom: 10px; width: 70px; height: 25px; background-color:rgb(42, 188, 233); border: 2px solid rgb(42, 188, 233); border-radius: 20px;"
+            id="comeback" />
+        <!-- 2. Create a jquery program to hide the div element when div 
+            tag is clicked.-->
+        <div class="content" id="div2">
+
+        </div>
+
+        <!--3. Create a jquery program to change 
+            the image when button is clicked.--->
+        <div class="img-outer">
+            <img src="https://lh5.googleusercontent.com/proxy/4a5ljUXFErh4Elgrd1MOhrravu8DwBaCeMVzAmZ4SY0fVRfhlrCxOQ9tc-bMUM18946YRnCw9SCPg5X_"
+                class="img" id="imgae" />
+            <input type="button" value="change" id="change"
+                style="width: 70px; height: 25px; background-color:rgb(42, 188, 233); border: 2px solid rgb(42, 188, 233); border-radius: 20px;" />
+        </div>
+
+        <!--4. write a Jquery program to change the color of all textboxes to blue when
+button is clicked(create 3 textboxes for same)-->
+
+        <div class="text-outer">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: larger; color: red;">Color Change</p>
+
+            <input type="text" placeholder="textbox" class="textbox" />
+            <input type="text" placeholder="textbox" class="textbox" />
+            <input type="text" placeholder="textbox " class="textbox" />
+            <input type="button" value="Color" id="colorchange"
+                style="width: 70px; height: 25px; background-color:rgb(42, 188, 233); border: 2px solid rgb(42, 188, 233); border-radius: 20px;" />
+
+        </div>
+
+        <!-- 5. Create a login screen to validate username
+             and password using jquery-->
+
+        <div class="login-outer">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: larger; color: red;">Login</p>
+            <input type="text" placeholder="UserName" id="name" class="login-css" />
+            <input type="password" placeholder="Password" id="password" class="login-css" />
+            <input type="button" value="Color" id="validate"
+                style="width: 70px; height: 25px; background-color:rgb(42, 188, 233); border: 2px solid rgb(42, 188, 233); border-radius: 20px;" />
+
+        </div>
+
+        <!---6. Create a jquery program to change the textbox backgroundcolor,
+bordercolor when focus is on any textbox-->
+
+        <div class="focus-outer">
+            <p style="font-family: Arial; font-size: larger; color: red;">Focus</p>
+
+            <input type="text" placeholder="textbox" class="focusbox">
+            <input type="text" placeholder="textbox" class="focusbox2">
+            <input type="text" placeholder="textbox" class="focusbox3">
+        </div>
+        <div class="mouse" id="mouse-coursor">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: larger; color: red; margin-left: 70px;">
+                Mouse Event</p>
+
+        </div>
+
+        <!--8. Find all h1 elements that are children of a div element and apply a
+background to them-->
+        <div class="heading-outer">
+            <h1>Manikantha</h1>
+            <h1>Garikapathi</h1>
+            <h1>Sai</h1>
+            <h1>Ram</h1>
+            <h1>Somuraju</h1>
+        </div>
+
+        <!--9. Develop a jquery code to count the following
+a. No of H1
+b. No of Div
+c. No of Paragraphs-->
+       <div class="Count-outer">
+        
+       </div>
+
+    </div>
+    <script src="AssignmentScript.js"></script>
+</body>
+
+</html>

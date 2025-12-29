@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .movie-header {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .movie-header img {
+            width: 220px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .movie-info h1 {
+            margin: 0;
+            color: #222;
+            font-size: 28px;
+        }
+
+        .movie-info p {
+            margin-top: 15px;
+            color: #444;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 22px;
+            background: #2a5298;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .back-btn:hover {
+            background: #1e3c72;
+        }
+
+        @media (max-width: 768px) {
+            .movie-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .movie-header img {
+                width: 180px;
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="movie-header">
+        <img id="poster" src="" alt="Movie Poster">
+
+        <div class="movie-info">
+            <h1 id="title">Loading...</h1>
+            <p id="content"></p>
+        </div>
+    </div>
+
+    <a href="gallery.html" class="back-btn">← Back to Gallery</a>
+</div>
+
+<script>
+    // SAFELY read and clean the id from URL
+    const params = new URLSearchParams(window.location.search);
+    let rawId = params.get("id");
+
+    // Remove anything that is not a number (handles ;, spaces, etc.)
+    let id = rawId ? rawId.replace(/[^0-9]/g, "") : null;
+    id = id ? Number(id) : null;
+
+    const data = {
+        1: {
+            title: "Kaithi",
+            content: "Kaithi (2019) is a Tamil action-thriller starring Karthi as Dilli, a former convict forced into a dangerous overnight mission to save injured police officers. Directed by Lokesh Kanagaraj, the film is known for its intense narrative and raw action.",
+            img: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/a3d6c588713509.5dde8adf50756.jpg"
+        },
+        2: {
+            title: "Ayan",
+            content: "Ayan (2009) is a Tamil action-thriller starring Suriya as Deva, a daring smuggler whose rise in the underworld brings him into conflict with powerful enemies. Directed by K. V. Anand, the film combines style, action, and strong music.",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUgp5lhPW6CSb5js3MK1QX6nPxEqKxI10LMg&s"
+        },
+        3: {
+            title: "Leo",
+            content: "Leo (2023) stars Vijay as Parthiban, a quiet café owner whose peaceful life is shattered when his violent past resurfaces. Directed by Lokesh Kanagaraj, the film explores identity, family, and redemption.",
+            img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d23f41184733377.65571621a3846.jpg"
+        },
+        4: {
+            title: "Vada Chennai",
+            content: "Vada Chennai (2018) is a gritty Tamil crime drama starring Dhanush as Anbu, a carrom player drawn into the violent gang wars of North Chennai. Directed by Vetrimaaran, it is acclaimed for its realism and layered storytelling.",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0HBtT9K_fW4dT7BQbMP52skQvGRaMDJWEihURaaLMouZwgGR7_96UZBzOqIqYitoxCs&usqp=CAU"
+        }
+    };
+
+    if (id && data[id]) {
+        document.getElementById("title").innerText = data[id].title;
+        document.getElementById("content").innerText = data[id].content;
+        document.getElementById("poster").src = data[id].img;
+    } else {
+        document.getElementById("title").innerText = "Movie not found";
+        document.getElementById("content").innerText =
+            "Please open this page by clicking a movie from the gallery.";
+        document.getElementById("poster").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

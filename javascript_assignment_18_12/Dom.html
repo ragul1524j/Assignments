@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="Dom-outer">
+        <div class="color-change" id="color">
+            <select id="selection" class="select-css" onchange="ColorChange()">
+                <option>Select Color</option>
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="gray">gray</option>
+            </select>
+        </div>
+
+        <div class="validate-form">
+            <form class="form">
+                <input type="text" placeholder="Username" id="username" />
+                <input type="text" placeholder="Password" id="password" />
+                <button class="btn" id="button" onclick="Validate(event)">Submit</button>
+            </form>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>EmpName</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EsNrz-D6-7uqoA1flC7oopzzVxrgchcaDQ&s"
+                            class="emp-img" id="img">
+                    </td>
+                    <td>Steve Rogers</td>
+                    <td>
+                        <button class="btn" id="button" onclick="ShowImage(this)">Click</button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://m.media-amazon.com/images/I/51wbiG0Z+7L._AC_UF894,1000_QL80_.jpg"
+                            class="emp-img" id="img">
+                    </td>
+                    <td>Tony Stark</td>
+                    <td>
+                        <button class="btn" id="button" onclick="ShowImage(this)">Click</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="validate-form">
+            <form class="form">
+                <input type="text" placeholder="Username" id="name" />
+                <input type="number" placeholder="Enter the num" id="count" />
+                <input type="button" value="Submit"
+                    style="background-color: rgb(30, 104, 150); border: 2px solid rgb(30, 104, 150); color: white; border-radius: 20px;"
+                    onclick="Iterator()" />
+            </form>
+        </div>
+        <div id="iterate">
+            <p id="val"></p>
+        </div>
+        <div class="image-changer">
+            <img class="image" id="selector"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtXvtIEChpSeWTWq-Dg1YI7ewFcUBzjGMO0Q&s" />
+        </div>
+    </div>
+    <script src="Events.js"></script>
+</body>
+
+</html>
